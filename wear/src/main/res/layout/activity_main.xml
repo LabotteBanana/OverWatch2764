@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.wearable.view.WatchViewStub xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/watch_view_stub"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:rectLayout="@layout/rect_activity_main"
-    app:roundLayout="@layout/round_activity_main"
-    tools:context="com.example.codingmaster.overwatch.MainActivity"
-    tools:deviceIds="wear"></android.support.wearable.view.WatchViewStub>
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/container2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue">
+
+        <ImageButton
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="59dp"
+            android:id="@+id/Record_Btn"
+            android:layout_marginStart="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:adjustViewBounds="false" />
+
+        <ImageButton
+            android:src="@android:drawable/ic_media_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Play_Btn"
+            android:layout_marginStart="17dp"
+            android:layout_alignTop="@+id/Record_Btn"
+            android:layout_toEndOf="@+id/Record_Btn"
+            android:visibility="visible" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/File_Name"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="31dp" />
+
+        <Button
+            android:text="Find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Find_Btn"
+            android:layout_below="@+id/Record_Btn"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>
